@@ -2,19 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>PersonalBlog</artifactId>
+        <groupId>org.blog</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.blog</groupId>
-    <artifactId>PersonalBlog</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>PersonalBlog-admin</module>
-        <module>PersonalBlog-common</module>
-        <module>PersonalBlog-system</module>
-    </modules>
+    <artifactId>PersonalBlog-system</artifactId>
 
-    <!--  表明这只是一个管理的Maven pom  -->
-    <packaging>pom</packaging>
+    <description></description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
