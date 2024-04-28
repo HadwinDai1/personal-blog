@@ -1,20 +1,19 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from './components/Home.vue';
-import About from './components/About.vue';
- 
-Vue.use(VueRouter);
- 
+// import { from } from "core-js/core/array";
+import {createRouter, createWebHistory} from "vue-router"; 
+
+import HomeIndex from '@/layout/HomeIndex' 
+
+
+
 const routes = [
-  { path: '/home', component: Home },
-  { path: '/about', component: About }
+  { path: '/', component: HomeIndex},
 ];
  
-const router = new VueRouter({
-  routes
-});
- 
-new Vue({
-  router,
-  // ...
-}).$mount('#app');
+
+const router = createRouter({
+  routes,
+  history: createWebHistory()
+})
+
+
+export default router;

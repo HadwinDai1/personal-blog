@@ -1,0 +1,10 @@
+# application.properties
+spring:
+  liquibase:
+    # 是否开启 liquibase 支持
+    enabled: ${SPRING_LIQUIBASE_ENABLED:true}
+    # 是否先删除数据库
+    drop-first: false
+    # master 文件
+    change-log: classpath:/db/liquibase/master.xml
+#    changelog是LiquiBase用来记录数据库的变更，一般放在CLASSPATH下，然后配置到执行路径中。
