@@ -18,7 +18,7 @@ public class SysUser implements Serializable {
 //    用户姓名
     private String userName;
 //    用户密码
-    private transient String password;
+    private String password;
 //    用户邮箱
     private String email;
 //    用户手机号
