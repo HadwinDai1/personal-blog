@@ -1,4 +1,4 @@
-package com.blog.system.controller;
+package com.blog.common.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/test01")
+@RequestMapping()
 public class Test1Controller {
     @RequestMapping("2")
     public String Test001(){
         return "OK2";
+    }
+
+
+    @RequestMapping("3")
+    public String Test002() {
+        return "Ok3";
     }
 }
