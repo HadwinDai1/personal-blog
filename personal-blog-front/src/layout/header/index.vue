@@ -12,11 +12,10 @@
         name: 'Header',
         data() {
             return{
-
+                
             }
         },
         methods: {
-
         }
     }
 </script>
@@ -27,7 +26,7 @@
     padding: 0;
     width: 100%;
     height: 90px;
-    color: white;
+    color: rgb(221, 143, 143);
     /* background-color: black; */
 }
 
