@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("")
-public class Test1Controller {
+public class Test2Controller {
     @RequestMapping("4")
     public String Test004(){
         return "OK4";

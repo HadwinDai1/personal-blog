@@ -9,6 +9,7 @@
         <module name="PersonalBlog-admin" />
         <module name="PersonalBlog-system" />
         <module name="PersonalBlog-common" />
+        <module name="PersonalBlog-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

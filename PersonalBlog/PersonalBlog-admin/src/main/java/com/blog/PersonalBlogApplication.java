@@ -6,10 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
- * <p>
  * web启动入口
- * </p>
- *
  * @author 2597378587@qq.com 2024/4/27 18:01
  * @version V1.0
  */
@@ -21,6 +18,11 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 public class PersonalBlogApplication {
     public static void main(String[] args) {
+        int i = -10;
+        System.out.println(Integer.toBinaryString(i));
+        int j = 10;
+        System.out.println(Integer.toBinaryString(j));
+
         SpringApplication.run(PersonalBlogApplication.class, args);
         System.out.println("------>>>>>> 程序启动成功 <<<<<<------\n" +
                 " _     _       ___   _       _   __   _\n" +
