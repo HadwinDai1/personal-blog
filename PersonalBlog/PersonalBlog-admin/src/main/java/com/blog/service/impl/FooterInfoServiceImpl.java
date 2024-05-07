@@ -4,7 +4,6 @@ import com.blog.domain.entity.FooterInfo;
 import com.blog.mapper.FooterInfoMapper;
 import com.blog.service.FooterInfoService;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,8 +15,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class FooterInfoServiceImpl implements FooterInfoService {
 
-    @Autowired
     private FooterInfoMapper footerInfoMapper;
+
+    public FooterInfoServiceImpl(FooterInfoMapper footerInfoMapper) {
+        this.footerInfoMapper = footerInfoMapper;
+    }
 
     /**
      * 查询页脚信息
