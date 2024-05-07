@@ -73,7 +73,6 @@
     padding: 0;
     width: 100%;
     height: 120px;
-    background-color: rgb(0, 0, 0);
     text-align: center;
     color: rgb(182, 177, 177);
 }

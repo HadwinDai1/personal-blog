@@ -35,6 +35,6 @@ export default{
 
 <style scoped>
 #app {
-    background-color: rgb(61, 57, 57);
+    background-image: url("../assets/background.jpg"); ;
 }
 </style>
