@@ -1,9 +1,12 @@
 package com.blog;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+import javax.sql.DataSource;
 
 /**
  * web启动入口
@@ -12,24 +15,14 @@ import org.springframework.scheduling.annotation.EnableAsync;
  */
 
 //  设置禁止自动配置数据库
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 //  开启异步功能
 @EnableAsync
-
+//  kai
+@MapperScan("com.blog.mapper")
 public class PersonalBlogApplication {
     public static void main(String[] args) {
-        int i = -10;
-        System.out.println(Integer.toBinaryString(i));
-        int j = 10;
-        System.out.println(Integer.toBinaryString(j));
-
         SpringApplication.run(PersonalBlogApplication.class, args);
-        System.out.println("------>>>>>> 程序启动成功 <<<<<<------\n" +
-                " _     _       ___   _       _   __   _\n" +
-                "| |   / /     /   | | |     | | |  \\ | |\n" +
-                "| |  / /     / /| | | |     | | |   \\| |\n" +
-                "| | / /     / / | | | |     | | | |\\   |\n" +
-                "| |/ /     / /  | | | |___  | | | | \\  |\n" +
-                "|___/     /_/   |_| |_____| |_| |_|  \\_|");
+        System.out.println("------>>>>>> 程序启动成功 <<<<<<------");
     }
 }

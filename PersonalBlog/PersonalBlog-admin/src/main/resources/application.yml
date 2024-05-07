@@ -1,10 +1,33 @@
 # application.properties
 spring:
   liquibase:
-    # 是否开启 liquibase 支持
-    enabled: ${SPRING_LIQUIBASE_ENABLED:true}
-    # 是否先删除数据库
-    drop-first: false
-    # master 文件
-    change-log: classpath:/db/liquibase/master.xml
-#    changelog是LiquiBase用来记录数据库的变更，一般放在CLASSPATH下，然后配置到执行路径中。
+#    # 是否开启 liquibase 支持
+#    enabled: ${SPRING_LIQUIBASE_ENABLED:true}
+#    # 是否先删除数据库
+#    drop-first: false
+#    # master 文件
+#    change-log: classpath:/db/liquibase/master.xml
+##    changelog是LiquiBase用来记录数据库的变更，一般放在CLASSPATH下，然后配置到执行路径中。
+  datasource:
+    url: jdbc:mysql://8.138.85.189:3306/personal
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 990604dhd
+
+# MyBatis配置
+mybatis-plus:
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*.xml
+  global-config:
+    db-config:
+      # 主键自增
+      id-type: auto
+  configuration:
+    # 全局映射器启用缓存
+    cache-enabled: true
+    # 允许 JDBC 支持自动生成主键
+#    use-generated-keys: true
+    # 配置默认的执行器
+    default-executor-type: reuse
+    # 驼峰式命名
+    map-underscore-to-camel-case: true
