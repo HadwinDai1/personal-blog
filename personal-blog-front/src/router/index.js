@@ -1,23 +1,33 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import IndexView from '../layout/index.vue'
-
+import Home from  '../views/index'
 Vue.use(VueRouter)
 
 const routes = [
+  // 登入路由配置
   {
-    path: '/',
-    name: 'index',
-    component: IndexView
+    path: '/login',
+    name: 'login',
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  // 首页路由
+  {
+    path: '/', // 路径
+    name: 'index',
+    component: IndexView, // 组件
+    redirect: '/index', // 重定向
+    children: [
+      {
+        path: '/index',
+        component: (resolve) => require(['@/views/index'], resolve),
+        children: [
+
+        ]
+      }
+    ]
+  },
+  
+
 ]
 
 const router = new VueRouter({

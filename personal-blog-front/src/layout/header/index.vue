@@ -32,9 +32,10 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 90px;
+    height: 100%;
     color: rgb(221, 143, 143);
     /* background-color: black; */
+    
 }
 
 .header-logo{
@@ -62,7 +63,7 @@
     border: 0px solid #ffffff00; /* 边框样式 */
     color: #fff; /* 文本颜色 */
     padding: 10px 20px; /* 按钮内边距 */
-    font-size: 16px; /* 字体大小 */
+    font-size: 20px; /* 字体大小 */
     transition: background-color 0.3s, color 0.3s; /* 过渡效果 */
 }
 
