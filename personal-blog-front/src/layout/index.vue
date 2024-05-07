@@ -35,6 +35,23 @@ export default{
 
 <style scoped>
 #app {
-    background-image: url("../assets/background.jpg"); ;
+    background-image: url("../assets/background.jpg");
+    background-attachment: fixed; /* 将背景固定 */
+    background-size: cover; /* 背景图片覆盖整个元素 */
+    height: 100vh;
+}
+
+
+.header {
+    height: 10vh;
+}
+
+.footer {
+    float: bottom;
+    height: 15vh;
+}
+
+.main {
+    height: 75vh;
 }
 </style>

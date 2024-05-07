@@ -3,19 +3,19 @@
         <div class="record">
             <!-- 作者信息 -->
             <div class="ICP">
-                <span>{{ yearTime }}@{{ author === undefined ? "暂时未设置" : author }}</span>
+                <span>{{ yearTime }}@{{ author }}</span>
             </div>
             <!-- 工业和信息化部政务服务平台备案号显示 -->
             <div class="ICP">
                 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-                    <span>{{ icpNumber === undefined ? "ICP备案暂时未申请" : icpNumber }}</span>
+                    <span>{{ icpNumber }}</span>
                 </a>
             </div>
             <!-- 全国互联网安全管理服务平台备案号显示 -->
             <div class="ICP">
                 <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
                     <img src="https://qiniuyun.theboyaply.cn/FinEALw7ifYIV2baxOAzDe1ctz1S" />
-                    <span>{{ policeNumber === undefined ? "公安备案暂时未申请" : policeNumber }}</span>
+                    <span>{{ policeNumber }}</span>
                 </a>
             </div>
         </div>
@@ -37,6 +37,8 @@
                 // 作者
                 author: undefined,
             }
+        },
+        created(){
         },
         // 挂载后
         mounted() {
@@ -72,9 +74,10 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 120px;
+    height: 100%;
+    background-color: rgba(127, 127, 127, 0.607);
     text-align: center;
-    color: rgb(182, 177, 177);
+    color: white
 }
 
 .auther{

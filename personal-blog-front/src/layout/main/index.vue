@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        Main
+        <router-view />
     </div>
 </template>
 
@@ -9,6 +9,6 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 713px;
+        height: 100%;
     }
 </style>

@@ -5,10 +5,10 @@
         </div>
         <div class="right">
             <div>
-                <a href="/"><button class="transparent-btn">首页</button></a>
-                <a href="https://www.baidu.com"><button class="transparent-btn">关于</button></a>
-                <a href="https://www.baidu.com"><button class="transparent-btn">作品</button></a>
-                <a href="https://www.baidu.com"><button class="transparent-btn">日志</button></a>
+                <router-link to="/index"><button class="transparent-btn">首页</button></router-link>
+                <router-link to="/index"><button class="transparent-btn">关于</button></router-link>
+                <router-link to="/index"><button class="transparent-btn">作品</button></router-link>
+                <router-link to="/index"><button class="transparent-btn">博客</button></router-link>
             </div>
         </div>
     </div>
