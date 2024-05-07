@@ -15,7 +15,7 @@
             <div class="ICP">
                 <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
                     <img src="https://qiniuyun.theboyaply.cn/FinEALw7ifYIV2baxOAzDe1ctz1S" />
-                    <span>{{ PoliceNumber === undefined ? "公安备案暂时未申请" : PoliceNumber }}</span>
+                    <span>{{ policeNumber === undefined ? "公安备案暂时未申请" : policeNumber }}</span>
                 </a>
             </div>
         </div>

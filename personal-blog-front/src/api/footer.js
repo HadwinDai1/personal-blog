@@ -1,8 +1,8 @@
-import http from '@/utils/request';
+import request from '@/utils/request';
 
 export function getFooterInfo() {
     return request({
-      url: '/getFooterInfo',
+      url: '/footer/info',
       method: 'get',
     });
   }
