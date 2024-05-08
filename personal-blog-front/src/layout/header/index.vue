@@ -8,7 +8,7 @@
                 <router-link to="/index"><button class="transparent-btn">首页</button></router-link>
                 <router-link to="/index"><button class="transparent-btn">关于</button></router-link>
                 <router-link to="/index"><button class="transparent-btn">作品</button></router-link>
-                <router-link to="/index"><button class="transparent-btn">博客</button></router-link>
+                <router-link to="/blog"><button class="transparent-btn">博客</button></router-link>
             </div>
         </div>
     </div>

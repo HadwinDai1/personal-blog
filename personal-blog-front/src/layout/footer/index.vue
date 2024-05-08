@@ -3,19 +3,19 @@
         <div class="record">
             <!-- 作者信息 -->
             <div class="ICP">
-                <span>{{ yearTime }}@{{ author }}</span>
+                <span>{{ yearTime }}@{{ this.$store.state.footerInfo.author }}</span>
             </div>
             <!-- 工业和信息化部政务服务平台备案号显示 -->
             <div class="ICP">
                 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">
-                    <span>{{ icpNumber }}</span>
+                    <span>{{ this.$store.state.footerInfo.icpNumber }}</span>
                 </a>
             </div>
             <!-- 全国互联网安全管理服务平台备案号显示 -->
             <div class="ICP">
                 <a href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
                     <img src="https://qiniuyun.theboyaply.cn/FinEALw7ifYIV2baxOAzDe1ctz1S" />
-                    <span>{{ policeNumber }}</span>
+                    <span>{{ this.$store.state.footerInfo.policeNumber }}</span>
                 </a>
             </div>
         </div>
@@ -23,8 +23,6 @@
 </template>
 
 <script>
-    import {getFooterInfo} from '@/api/footer'
-
     export default{
         data(){
             return{
@@ -44,8 +42,6 @@
         mounted() {
             // 初始化当前年份
             this.nowYearTime();
-            // 初始化页脚信息
-            this.getFooterInfo();
         },
         // 方法定义
         methods: {
@@ -53,16 +49,6 @@
             nowYearTime() {
                 const date = new Date();
                 this.yearTime = date.getFullYear();
-            },
-            // 获取页脚信息
-            getFooterInfo(){
-                getFooterInfo().then((res) => {
-                    this.icpNumber = res.data.icpNumber;
-                    this.policeNumber = res.data.policeNumber;
-                    this.author = res.data.author;
-                }).finally(() => {
-                this.loading = false;
-                });
             },
         },
     }

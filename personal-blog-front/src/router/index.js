@@ -23,6 +23,13 @@ const routes = [
         children: [
 
         ]
+      },
+      {
+        path: '/blog',
+        component: (resolve) => require(['@/views/Login'], resolve),
+        children: [
+
+        ]
       }
     ]
   },

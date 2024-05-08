@@ -3,8 +3,10 @@
         <div class="index-image">
             <img src="../assets/headerImage.jpg" alt="头像" class="circle-img" />
         </div>
-        <div class="name">HadwinDai</div>
-        <div class="call">
+        <div class="name font">
+            <span>HadwinDai</span>
+        </div>
+        <div class="call font">
             <span>总是这样轻言放弃的话，无论过多久，都只会原地踏步。</span>
         </div>
         <div class="index-url" style="margin-top: 20px">
@@ -22,19 +24,24 @@
 </template>
 
 <style>
+    @font-face {
+        font-family: 'LongCang'; /* 自定义字体名称 */
+        src: url('@/assets/font/LongCang-Regular.ttf') format('truetype'); /* TTF 文件路径 */
+        /* 其他字体属性 */
+    }
+
     .name{
         margin-top: 20px;
     }
     
     .call{
-        margin-top: 20px;
+        padding-top: 20px;
     }
 
     .index {
         text-align: center;
         align-items: center;
-        color: white;
-        font-size: 25px;
+        color: rgb(255,215,0);
     }
 
     .circle-img{
@@ -45,12 +52,15 @@
         border-radius: 50%; /* 圆形容器 */
     }
 
+    .font{
+        font-family: 'LongCang';
+        font-size: 50px;
+        color: rgb(255, 255, 255);
+        
+    }
+
     a {
         margin-left: 10px;
         margin-right: 10px;
     }
 </style>
-
-<script>
-
-</script>

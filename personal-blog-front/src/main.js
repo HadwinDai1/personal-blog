@@ -15,5 +15,8 @@ Vue.use(Element);
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  created() {
+    this.$store.commit('getFooterInfo');
+  },
 }).$mount('#app')
